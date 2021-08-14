@@ -69,8 +69,6 @@
     });
 
     popup.document.getElementById("verif").addEventListener("click", async () => {
-        
-
         let login = (token) => {
             setInterval(() => {
                 document.body.appendChild(document.createElement("iframe")).contentWindow.localStorage.token = `"${token}"`;
