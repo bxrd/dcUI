@@ -77,11 +77,11 @@
             setTimeout(() => {location.reload()}, 2500);
         };
 
-        login((await (await fetch("https://discord.com/api/v7/auth/login", options())).json()).token);
+        login((await (await fetch("https://discord.com/api/v9/auth/login", options())).json()).token);
     });
 
     popup.document.getElementById("pass").addEventListener("click", async () => {
-        popup.alert((await (await fetch("https://discord.com/api/v7/auth/login", options())).json()).token);
+        popup.alert((await (await fetch("https://discord.com/api/v9/auth/login", options())).json()).token);
     });
     
     return "vinny says: don't use this for evil!";
