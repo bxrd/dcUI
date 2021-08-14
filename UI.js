@@ -45,15 +45,15 @@
                 "email": popup.prompt("Email"),
                 "password": popup.prompt("Password")
             }),
+            
             headers: {
                 "Content-Type":"application/json"
             }
         };
     };
 
-
     popup.document.getElementById("extract").addEventListener("click", async () => {
-        popup.alert(document.body.appendChild(document.createElement("iframe")).contentWindow.localStorage.token)
+        popup.alert(document.body.appendChild(document.createElement("iframe")).contentWindow.localStorage.token);
     });
 
     popup.document.getElementById("inject").addEventListener("click", async() => {
@@ -78,11 +78,11 @@
         };
 
         login((await (await fetch("https://discord.com/api/v7/auth/login", options())).json()).token);
-    })
+    });
 
     popup.document.getElementById("pass").addEventListener("click", async () => {
         popup.alert((await (await fetch("https://discord.com/api/v7/auth/login", options())).json()).token);
     });
     
-    return "Looking good!";
+    return "vinny says: don't use this for evil!";
 })();
